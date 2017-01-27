@@ -9,7 +9,20 @@
  Client calculates hash(plain_text_password + nonce) and sends it to server. Hash value changes every time and server 
  is able to authenticate user.
  
+<pre>
+  ______________________                                      ________________________
+ |                      |              username              |                        | 
+ |                      |----------------------------------->|                        | 
+ |                      |         user_salt, nonce           |                        | 
+ |                      |<-----------------------------------|                        | 
+ |       Client         | hash(nonce + hash(password + salt) |         Server         |
+ |                      |----------------------------------->|                        | 
+ |                      |        OK | Access Denied          |                        | 
+ |                      |<-----------------------------------|                        | 
+ |______________________|                                    |________________________|
  
+</pre>
+
 Sample User in `sqlite` Database:
 
     login: admin
