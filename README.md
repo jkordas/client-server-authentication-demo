@@ -1,6 +1,6 @@
 **Client - Server** authentication demo in python 2.7
 
-####Main aim of this project was to show how to authenticate user without transferring:
+#### Main aim of this project was to show how to authenticate user without transferring:
 * plain text password
 * hashed password
 * other value which does not change in subsequent authentication processes
